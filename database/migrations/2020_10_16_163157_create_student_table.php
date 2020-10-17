@@ -15,12 +15,10 @@ class CreateStudentTable extends Migration
     {
         Schema::create('student', function (Blueprint $table) {
             $table->id();
-            $table->string('matricula')->unique();
             $table->string('nombre');
             $table->string('email')->nullable();
             $table->string('ap')->nullable();
             $table->string('am')->nullable();
-            $table->integer('edad')->nullable();
             $table->date('nacimiento')->default('9999/12/31');
             $table->string('direccion')->nullable();
             $table->string('ciudad')->nullable();
@@ -32,6 +30,7 @@ class CreateStudentTable extends Migration
             $table->string('oficina')->nullable();
             $table->string('celular')->nullable();
             $table->string('activo')->nullable();    
+            $table->text('ruta_foto')->nullable();    
             $table->timestamps();
         });
     }
