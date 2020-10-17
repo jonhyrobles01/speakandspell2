@@ -19,6 +19,8 @@ class CreateLevelsTable extends Migration
             $table->string('horario');
             $table->date('finicio');
             $table->date('ffin');
+            $table->integer('costo');
+            $table->integer('activo')->default(1);
             $table->timestamps();
         });
     }

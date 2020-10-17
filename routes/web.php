@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\V1\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::namespace('V1')->group(function() {
-    Route::post('/login', 'Auth\LoginController@authenticate');
-});
+Route::post('/login', [LoginController::class,'authenticate']);
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
