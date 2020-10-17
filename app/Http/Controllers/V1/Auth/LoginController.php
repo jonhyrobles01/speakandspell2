@@ -14,7 +14,6 @@ class LoginController extends Controller
     public function __construct()
     {
         setlocale(LC_TIME, 'es_Es.utf8');
-        setlocale(LC_TIME, 'Spanish');
     }
     
     public function authenticate(Request $request)
@@ -32,7 +31,7 @@ class LoginController extends Controller
         $AlertBirthday    = view('Components.AlertBirthday',compact('StudentsBirthday', 'Expiredlevels'));
 
         alert()->html(
-            "Cumpleañeros de " . now()->formatLocalized('%B') . " : ",
+            "Cumpleañeros de " . ucfirst(now()->formatLocalized('%B')) . " : ",
             $AlertBirthday->render(),
             ''
         )->persistent('Close');

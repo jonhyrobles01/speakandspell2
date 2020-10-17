@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Models\Students;
 use Illuminate\Http\Request;
+use App\Models\Models\Students;
 
 class StudentsController extends Controller
 {
@@ -14,7 +14,7 @@ class StudentsController extends Controller
      */
     public function index()
     {
-        //
+        return view('Students.index');
     }
 
     /**

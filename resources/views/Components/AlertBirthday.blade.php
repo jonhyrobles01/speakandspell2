@@ -1,7 +1,7 @@
 <table class='border-collapse border-2 border-gray-500' style="width: 100%">
 	<thead>
 		<th class="border border-gray-400 px-4 py-2 text-gray-800">NOMBRE</th>
-		<th class="border border-gray-400 px-4 py-2 text-gray-800">DIA</th>
+		<th class="border border-gray-400 px-4 py-2 text-gray-800">DÍA</th>
 	</thead>
 	<tbody>
 		@if(count($StudentsBirthday) > 0)
